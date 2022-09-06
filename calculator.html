@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #clear{
+            width: 100px;
+            height: 25px;
+            background-color: aliceblue;
+            /* border-bottom: 2px; */
+            border-radius: 20px;
+        }
+        #clear:hover{
+            background-color: brown;
+            color: whitesmoke;
+        }
+        .formstyle{ 
+            width: 15%;
+            margin: auto;
+          padding: 40px;
+          display: flex;
+          justify-content: center;
+          border: 1px solid ;
+        }
+        .all-rows{
+            margin-top: 10px;
+            text-align: center;
+        }
+        .rows{
+           
+        
+            
+        }
+        .clear-border{
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="formstyle">
+        <form  name="form1"> 
+         <input id="calc" type="text" name="answer"><br>
+            <!-- row! -->
+         <div class="all-rows">
+            <div class="rows"> <input type="button" value="1" onclick="form1.answer.value+='1'">
+            <input type="button" value="2" onclick="form1.answer.value+='2'">
+            <input type="button" value="3" onclick="form1.answer.value+='3'">
+            <input type="button" value="+" onclick="form1.answer.value+='+'"><br><br>
+        </div>
+            <!-- row1 -->
+
+            <!-- row2 -->
+         <div class="rows"><input type="button" value="4" onclick="form1.answer.value+='4'">
+            <input type="button" value="5" onclick="form1.answer.value+='5'">
+            <input type="button" value="6" onclick="form1.answer.value+='6'">
+            <input type="button" value="-" onclick="form1.answer.value+='-'"><br><br>
+         </div>
+
+            <!-- row2 -->
+
+            <!-- row3 -->
+            <div class="rows"><input type="button" value="7" onclick="form1.answer.value+='7'">
+            <input type="button" value="8" onclick="form1.answer.value+='8'">
+            <input type="button" value="9" onclick="form1.answer.value+='9'">
+            <input type="button" value="*" onclick="form1.answer.value+='*'"><br><br>
+            </div>
+            <!-- row3 -->
+
+            <!-- row 4 -->
+           <div class="rows"> <input type="button" value="/" onclick="form1.answer.value+='/'">
+            <input type="button" value="0" onclick="form1.answer.value+='0'">
+            <input type="button" value="." onclick="form1.answer.value+='.'">
+              <!-- when we click the = button , the onclick shows the sum result on calculator screen -->
+              <input type="button" value="=" onclick="form1.answer.value=eval(form1.answer.value)">
+            
+           </div>
+
+            <!-- row4 -->
+          
+            <br>
+            <br>
+            <!-- clear button -->
+           <div class="rows"> <input class="clear-border" type="button" value="clear all" onclick="form1.answer.value='' " id="clear"></div>
+        </div>
+
+        </form>
+    </div>
+</body>
+</html>
